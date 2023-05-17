@@ -1,6 +1,6 @@
 //Gombra feliratkozas
 document.getElementById("nevKereses").addEventListener("click", function(){
-    window.location.href = "/characters/index.html?name=" + document.getElementById("nev").value;
+    window.location.href = "index.html?name=" + document.getElementById("nev").value;
 }, false);
 
 //console.log("Kiss Lajos".includes("aj"));
@@ -65,7 +65,7 @@ function feldolgozo(szereplokKomplett){
     liGombokElott.setAttribute("class", "page-item");
     aGombokElott.setAttribute("class", "page-link");
 
-    var aGombokElottUrl = "/characters/index.html?page=1";
+    var aGombokElottUrl = "index.html?page=1";
     if(cname != null){
         aGombokElottUrl += "&name=" + cname;
     }
@@ -115,7 +115,7 @@ function feldolgozo(szereplokKomplett){
         a.appendChild(document.createTextNode(i));
         a.setAttribute("class", "page-link");
 
-        var aUrl = "/characters/index.html?page=" + i;
+        var aUrl = "index.html?page=" + i;
         if(cname != null){
             aUrl += "&name=" + cname;
         }
@@ -134,7 +134,7 @@ function feldolgozo(szereplokKomplett){
     liGombokUtan.setAttribute("class", "page-item");
     aGombokUtan.setAttribute("class", "page-link");
 
-    var aGombokUtanUrl = "/characters/index.html?page=" + szereplokKomplett.info.pages;
+    var aGombokUtanUrl = "index.html?page=" + szereplokKomplett.info.pages;
     if(cname != null){
         aGombokUtanUrl += "&name=" + cname;
     }
@@ -161,7 +161,7 @@ function feldolgozo(szereplokKomplett){
 
         var a = document.createElement("a");
         a.setAttribute("class", "btn btn-success w-100");
-        a.setAttribute("href", "/character/index.html?charId=" + szereplok[i].id);
+        a.setAttribute("href", "index.html?charId=" + szereplok[i].id);
         a.appendChild(document.createTextNode("More information..."));
 
         var cardDiv = document.createElement("div");
